@@ -6,4 +6,6 @@ before_install:
    - docker build -t test-docker-react -f Dockerfile.dev .
    
 script:
-   - docker run test-docker-recat npm run test -- --coverage
+   - docker run test-docker-react npm run test -- --coverage
+
+language: generic 
