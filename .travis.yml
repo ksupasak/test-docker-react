@@ -1,0 +1,9 @@
+sudo: required
+services:
+   - docker
+
+before_install:
+   - docker build -t test-docker-react -f Dockerfile.dev .
+   
+script:
+   - docke run test-docker-recat npm run test -- --coverage
